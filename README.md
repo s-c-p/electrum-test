@@ -15,6 +15,14 @@ Make API to search a movie by
  * minimum_rating -> List[Movie]
  * genere -> List[Movie]
 
+Shape of data:
+
+ * title - str
+ * released year - +ve int, 4 digit, sensible?
+ * rating - float (0,5]
+ * id - str, alphanumeric
+ * genere - List[str]
+
 ### Freedoms:
 
  * no mention of DB technology, for 0.0.1 release I'll use in-memory dict (anyway free API limit is 1000/day so it's unlikely to flood RAM in first day), persistance via plain-JSON/shelve, mean #tags per movie is small indexing of 1-to-many isn't a concern for current size of dataset
